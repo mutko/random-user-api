@@ -1,4 +1,4 @@
-const usersNumber = 10;
+const usersNumber = 20;
 const url = `https://randomuser.me/api/?results=${usersNumber}`;
 
 fetch(url)
@@ -12,9 +12,95 @@ fetch(url)
         let pattern = ``;
 
         for (let i = 0; i < users.results.length; i++) {
-
+            
             const user = users.results[i];
             const userImg = user.picture.large;
+
+            let userRegistrationYear = user.registered.date.slice(0, 4);
+            let userRegistrationMonth = user.registered.date.slice(5, 7);
+            let userRegistrationDay = user.registered.date.slice(8, 10);
+                
+            switch (userRegistrationMonth) {
+                case "01":
+                    userRegistrationMonth = "January";
+                    break;
+                case "02":
+                    userRegistrationMonth = "February";
+                    break;
+                case "03":
+                    userRegistrationMonth = "March";
+                    break;
+                case "04":
+                    userRegistrationMonth = "April";
+                    break;
+                case "05":
+                    userRegistrationMonth = "May";
+                    break;
+                case "06":
+                    userRegistrationMonth = "June";
+                    break;
+                case "07":
+                    userRegistrationMonth = "July";
+                    break;
+                case "08":
+                    userRegistrationMonth = "August";
+                    break;
+                case "09":
+                    userRegistrationMonth = "September";
+                    break;
+                case "10":
+                    userRegistrationMonth = "October";
+                    break;
+                case "11":
+                    userRegistrationMonth = "November";
+                    break;
+                case "12":
+                    userRegistrationMonth = "December";
+                    break;
+            }
+
+            let userBirthYear = user.dob.date.slice(0, 4);
+            let userBirthMonth = user.dob.date.slice(5, 7);
+            let userBirthDay = user.dob.date.slice(8, 10);
+                
+            switch (userBirthMonth) {
+                case "01":
+                    userBirthMonth = "January";
+                    break;
+                case "02":
+                    userBirthMonth = "February";
+                    break;
+                case "03":
+                    userBirthMonth = "March";
+                    break;
+                case "04":
+                    userBirthMonth = "April";
+                    break;
+                case "05":
+                    userBirthMonth = "May";
+                    break;
+                case "06":
+                    userBirthMonth = "June";
+                    break;
+                case "07":
+                    userBirthMonth = "July";
+                    break;
+                case "08":
+                    userBirthMonth = "August";
+                    break;
+                case "09":
+                    userBirthMonth = "September";
+                    break;
+                case "10":
+                    userBirthMonth = "October";
+                    break;
+                case "11":
+                    userBirthMonth = "November";
+                    break;
+                case "12":
+                    userBirthMonth = "December";
+                    break;
+            }
 
             pattern +=
             `<div class="user-card">
@@ -49,7 +135,7 @@ fetch(url)
                     <p class="user-registered">
                         Registered 
                         <br>
-                        ${user.registered.date.substring(0, 10)}
+                        ${userRegistrationMonth} ${userRegistrationDay}, ${userRegistrationYear}
                     </p>
 
                     <ul class="user-info">
@@ -73,7 +159,7 @@ fetch(url)
                         <li class="media">
                             <i class="fas fa-birthday-cake fa-lg media-img"></i>
                             <span class="media-body">
-                                ${user.dob.date.substring(0, 10)} 
+                                ${userBirthMonth} ${userBirthDay}, ${userBirthYear}
                                 <br>
                                 <span>Date of birth</span>
                             </span>
