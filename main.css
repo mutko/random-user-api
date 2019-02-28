@@ -25,7 +25,6 @@ body {
     color: var(--main-font);
     background: #642B73;  /* fallback for old browsers */
     background: linear-gradient(to top, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 h1, p {
     margin: 0;
@@ -115,6 +114,7 @@ h1, p {
 }
 .user-info .media-img {
     flex: 0 1 20px;
+    color: var(--info);
 }
 .user-info .media-body span {
     color: var(--sec-font);

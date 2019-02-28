@@ -3,16 +3,10 @@ const url = `https://randomuser.me/api/?results=${usersNumber}`;
 
 fetch(url)
     
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(response) {
-       loadUsers(response);
-    })
+    .then( (response) => response.json() )
+    .then( (response) => loadUsers(response) )
 
     function loadUsers(users) {
-        console.log(users);
-
 
         let container = document.getElementById('container');
         let pattern = ``;
@@ -88,7 +82,5 @@ fetch(url)
                 </div>
             </div>`;
         }
-
         container.innerHTML = pattern;
-
     }
