@@ -1,0 +1,111 @@
+/*  */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+:root {
+    box-sizing: border-box;
+    --main-bg: #f6f6ee;
+    --sec-bg: rgb(102, 112, 146);
+    --main-font: #16171e;
+    --sec-font: #a7a8b2;
+    --white: #fff;
+    --info: #ee376c;
+}
+*, 
+::after,
+::before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--main-font);
+}
+h1, p {
+    margin: 0;
+}
+
+.user-card {
+    max-width: 350px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    background-color: var(--main-bg);
+    transition: .5s;
+}
+.user-card:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+}
+.user-card__heading {
+    background: url('bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    color: var(--white);
+}
+
+.user-location {
+    text-transform: capitalize;
+}
+.user-location a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--white);
+}
+.media {
+    display: flex;
+    align-items: center;
+}
+.user-card__heading .media {
+    padding: 20px 20px 100px 20px;
+}
+.user-card__heading .media-img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.media-body {
+    margin-left: 20px;
+}
+.media-body h1 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.user-card__body {
+    padding: 30px 20px 10px 20px;
+    position: relative;
+}
+.info-icon {
+    color: var(--info);
+    position: absolute;
+    right: 10px;
+    top: -35px;
+    z-index: 10;
+}
+.user-registered {
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+.user-info {
+    list-style: none;
+    padding: 0;
+}
+.user-info .media {
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+.user-info .media-img {
+    flex: 0 1 20px;
+}
+.user-info .media-body span {
+    color: var(--sec-font);
+}
