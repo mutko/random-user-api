@@ -1,4 +1,4 @@
-const usersNumber = 1;
+const usersNumber = 10;
 const url = `https://randomuser.me/api/?results=${usersNumber}`;
 
 fetch(url)

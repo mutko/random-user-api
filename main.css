@@ -9,7 +9,7 @@
     --main-font: #16171e;
     --sec-font: #a7a8b2;
     --white: #fff;
-    --info: #ee376c;
+    --info: #C6426E;
 }
 *, 
 ::after,
@@ -18,18 +18,28 @@
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: var(--main-font);
+    background: #642B73;  /* fallback for old browsers */
+    background: linear-gradient(to top, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 h1, p {
     margin: 0;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(300px, 350px ) );
+    justify-content: center;
+    grid-gap: 10px;
+}
+
 .user-card {
-    max-width: 350px;
+    width: 100%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
     background-color: var(--main-bg);
     transition: .5s;
